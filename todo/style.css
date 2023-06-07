@@ -1,0 +1,185 @@
+:root {
+    --todo-background-color: #282850;
+    --todo-add-form-color: #3b3b71;
+    --text-white: #ffffff;
+    --light-color: #d5d2d284;
+    --todo-list-color: #44446B;
+    --text-color-black: #000000;
+    --tick-mark-color: #4bb543;
+    --add-btn-color: #3E79B0;
+    --tick-bg: #ccc;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--todo-background-color);
+}
+
+.todo-wrapper {
+    padding: 100px 0;
+
+}
+
+.todo-head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    width: 100%;
+
+}
+
+.todo-head h1 {
+    color: var(--text-white);
+    margin: 0 2rem;
+}
+
+.todo-head img {
+    max-width: 100%;
+    margin: 0 2rem;
+    width: 60px;
+}
+
+
+.todo-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.todo-form .todo-input::placeholder {
+    color: var(--light-color);
+}
+
+.todo-form .todo-input,
+.todo-form .todo-btn {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: var(--text-white);
+    background-color: var(--todo-add-form-color);
+    padding: 1.7rem;
+    height: 50px;
+    display: flex;
+    align-items: center;
+
+}
+
+.todo-form .todo-btn {
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.todo-form .todo-btn ion-icon {
+    width: 1.6rem;
+    height: 1.6rem;
+    cursor: pointer;
+    border-radius: 50px;
+    padding: .2rem;
+    background-color: var(--add-btn-color);
+    transition: all 0.3s ease;
+}
+
+.todo-form .todo-btn ion-icon:hover {
+    background-color: var(--tick-mark-color);
+}
+
+
+
+#todo-ul-list {
+    position: relative;
+    list-style: none;
+
+}
+
+.todo-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--todo-list-color);
+    margin: 2rem auto;
+    width: 300px;
+    height: 60px;
+    transition: all 1s ease;
+}
+
+.todo-div .todo-list {
+    flex: 1;
+    color: var(--text-white);
+    width: 300px;
+    padding: 1rem;
+}
+
+
+
+.todo-div .tick-bg {
+    border: none;
+    margin-left: .7rem;
+    padding: .4rem;
+    border-radius: 50%;
+    /* background-color: var(--tick-mark-color); */
+    /* border: 1px solid #eee; */
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+    color: var(--tick-bg);
+
+}
+
+.tick-bg {
+    /* background-color: var(--text-white); */
+    border: var(--tick-bg)
+}
+
+
+.todo-div .delete-todo {
+    border: none;
+    font-size: 1.5rem;
+    background-color: #3E79B0;
+    color: var(--text-white);
+    cursor: pointer;
+    height: 60px;
+    width: 60px;
+    position: relative;
+
+}
+
+.todo-div .delete-todo:hover {
+    background-color: #ff8447;
+
+}
+
+.todo-div .delete-icon {
+    color: var(--text-white);
+    position: relative;
+    z-index: 1;
+    /*  */
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+
+}
+
+.completed .tick-icon {
+    color: var(--text-white);
+    z-index: 1;
+
+
+}
+
+.completed .tick-bg {
+    background-color: rgba(12, 189, 65, 0.814);
+
+}
