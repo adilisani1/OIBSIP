@@ -1,0 +1,138 @@
+:root {
+    --body-bg: #4E89C8;
+    --calculator-color: #EBF5FF;
+    --output-color: #CCE4FF;
+    --sum-color: #A3D0FA;
+    --numbers-color: #CCE4FF;
+    --eval-color: #4E8AC8;
+    --numbers-text-color: #163D61;
+    --sum-text-color: #4D88C8;
+    --eval-text-color: #ffffff;
+   
+    
+
+
+    /* HOVER */
+    --eval-hover-color: #8cc1f7;
+    --sum-hover-color: #cbe6ff;
+    --numbers-hover-color: #aec8e5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--body-bg);
+
+}
+
+.calculator-wrapper {
+    width: 100%;
+    height: 100vh;
+    margin: 3rem 0;
+}
+
+.calculator-text {
+    display: flex;
+    justify-content: center;
+}
+
+.calculator-text h1 {
+    color: var(--eval-text-color);
+
+}
+
+.calculator {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--calculator-color);
+    margin: 2rem auto;
+    padding: 50px;
+    width: 470px;
+    border-radius: 15px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+
+.calculator .form-control {
+    border: none;
+    outline: none;
+    background-color: var(--output-color);
+    padding: 20px 10px;
+    color: var(--numbers-text-color);
+    text-align: right;
+    width: 100%;
+    margin-bottom: .8rem;
+    font-size: 1.5rem;
+    font-family: var(--font-family);
+    font-weight: 600;
+}
+
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #ced4da;
+}
+
+
+.grid {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+}
+
+.grid button {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border: none;
+    outline: none;
+    background-color: var(--numbers-color);
+    color: var(--numbers-text-color);
+    padding: 7px 5px;
+    margin: .4rem 0rem;
+    width: 70px;
+    height: 50px;
+    font-size: 1.2rem;
+    font-family: var(--font-family);
+    font-weight: 500;
+    border-radius: 10px;
+
+}
+
+.grid button.numbers {
+    height: 70px;
+}
+
+.grid button.sum-color {
+    color: var(--sum-text-color);
+    background-color: var(--sum-color);
+}
+
+
+.grid button.sum-color:hover {
+
+    background-color: var(--sum-hover-color);
+}
+
+.grid button.btn-equal {
+    width: 218px;
+    background-color: var(--eval-color);
+    color: var(--eval-text-color);
+
+}
+
+.grid button.btn-equal:hover {
+
+    background-color: var(--eval-hover-color);
+
+
+}
+
+button:hover {
+    background-color: var(--numbers-hover-color);
+}
